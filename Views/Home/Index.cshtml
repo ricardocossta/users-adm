@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Upload de Arquivo XML";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <h2 class="text-center">Olá, faça o upload do arquivo XML para gerar a tabela com os usuários</h2>
+        </div>
+        <div class="col-md-12 mt-4">
+            <div class="card">
+                <div class="card-body">
+                    <form method="post" action="@Url.Action("ImportarUsuarios", "Home")" enctype="multipart/form-data">
+                        <div class="form-group text-center">
+                            <label for="file">Selecione o arquivo XML:</label>
+                            <input type="file" name="file" id="file" class="form-control-file">
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-primary">Salvar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
